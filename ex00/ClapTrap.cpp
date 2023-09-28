@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:13:06 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/26 10:00:27 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/09/27 18:42:19 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap(void) : _name("Default"), _hp(10), _ep(10), _ad(0)
 {
-    std::cout << "ClapTrap Default constructor." << std::endl;
+    std::cout << "ClapTrap Default constructor called!." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _ep(10), _ad(0)
@@ -24,13 +24,13 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _ep(10), _ad(0)
 
 ClapTrap::ClapTrap(ClapTrap const &clap)
 {
-    std::cout << "Claptrap" << this->_name << "copy constructor called!." << std::endl;
+    std::cout << "Claptrap" << this->_name << " copy constructor called!." << std::endl;
     *this = clap;
 }
 
 ClapTrap    &ClapTrap::operator=(ClapTrap const &clap)
 {
-    std::cout << "Claptrap assignment operator." << std::endl;
+    std::cout << "Claptrap assignment operator called!." << std::endl;
     this->_name = clap._name;
     this->_hp = clap._hp;
     this->_ep = clap._hp;
@@ -40,7 +40,7 @@ ClapTrap    &ClapTrap::operator=(ClapTrap const &clap)
 
 ClapTrap::~ClapTrap(void)
 {
-    std::cout << "Clapman " << this->_name << " destructor called!" << std::endl;
+    std::cout << "ClapTrap " << this->_name << " destructor called!." << std::endl;
 }
 
 void    ClapTrap::attack(const std::string &target)

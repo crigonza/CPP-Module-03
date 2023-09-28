@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 19:00:22 by crigonza         ###   ########.fr       */
+/*   Created: 2023/09/27 19:58:51 by crigonza          #+#    #+#             */
+/*   Updated: 2023/09/27 20:21:10 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
+
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-int     main(void)
+class   DiamondTrap : public ScavTrap, public FragTrap
 {
-    ScavTrap    def;
-    ScavTrap    batman("Batman");
-    ScavTrap    copy(batman);
-    ScavTrap    joker("Joker");
+    private:
+        std::string     _name;
+    public:
+        DiamondTrap(void);
+        DiamondTrap(std::string name);
+        DiamondTrap(DiamondTrap const &diamond);
+        ~DiamondTrap(void);
 
-    def = joker;
+        DiamondTrap &operator=(DiamondTrap const &diamond);
 
+        void    whoAmI(void);
+};
 
-    def.attack("me");
-    batman.attack("Poison Ivy");
-
-    return (0);
-}
+#endif

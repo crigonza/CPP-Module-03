@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 19:00:22 by crigonza         ###   ########.fr       */
+/*   Created: 2023/09/27 19:07:02 by crigonza          #+#    #+#             */
+/*   Updated: 2023/09/27 19:45:03 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-int     main(void)
+#include "ClapTrap.hpp"
+
+class   FragTrap : public ClapTrap
 {
-    ScavTrap    def;
-    ScavTrap    batman("Batman");
-    ScavTrap    copy(batman);
-    ScavTrap    joker("Joker");
+    public:
+        FragTrap(void);
+        FragTrap(std::string name);
+        FragTrap(FragTrap const &frag);
+        ~FragTrap(void);
 
-    def = joker;
+        FragTrap    &operator=(FragTrap const &frag);
 
+        void    highFivesGuys(void);
+};
 
-    def.attack("me");
-    batman.attack("Poison Ivy");
-
-    return (0);
-}
+#endif

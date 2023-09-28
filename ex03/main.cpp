@@ -6,15 +6,16 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 19:00:22 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/09/27 20:32:03 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int     main(void)
 {
-    ScavTrap    def;
+    DiamondTrap     def;
+    /* ScavTrap    def;
     ScavTrap    batman("Batman");
     ScavTrap    copy(batman);
     ScavTrap    joker("Joker");
@@ -23,7 +24,7 @@ int     main(void)
 
 
     def.attack("me");
-    batman.attack("Poison Ivy");
+    batman.attack("Poison Ivy"); */
 
     return (0);
 }
