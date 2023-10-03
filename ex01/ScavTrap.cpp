@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 11:39:16 by crigonza          #+#    #+#             */
-/*   Updated: 2023/10/02 21:05:09 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:07:37 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ ScavTrap::~ScavTrap(void)
 
 void    ScavTrap::guardGate(void)
 {
-    std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode!." << std::endl;
+    if (this->_hp > 0)
+        std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode!." << std::endl;
+    else
+        std::cout << this->_name << " is dead." << std::endl;
 }
 
 void    ScavTrap::attack(const std::string &target)

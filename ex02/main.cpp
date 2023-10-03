@@ -6,24 +6,21 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 19:00:22 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:32:04 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int     main(void)
 {
-    ScavTrap    def;
-    ScavTrap    batman("Batman");
-    ScavTrap    copy(batman);
-    ScavTrap    joker("Joker");
+    FragTrap    goku("Goku");
+    FragTrap    frezzer("Freezer");
 
-    def = joker;
-
-
-    def.attack("me");
-    batman.attack("Poison Ivy");
-
+    goku.attack("Frezzer");
+    frezzer.takeDamage(30);
+    frezzer.beRepaired(20);
+    goku.highFivesGuys();
+    
     return (0);
 }

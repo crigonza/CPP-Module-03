@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 10:03:13 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 18:19:05 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/02 21:03:40 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class   ScavTrap : public ClapTrap
         ScavTrap    &operator=(ScavTrap const &scav);
 
         void    guardGate(void);
+        void    attack(std::string const &target);
 };
 
 #endif

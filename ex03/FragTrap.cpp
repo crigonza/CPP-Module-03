@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 19:45:30 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 20:03:36 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/03 11:07:03 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap(void)
 {
-    std::cout << "FragTrap default constructor called!" << std::endl;
+    std::cout << "FragTrap Default constructor called!." << std::endl;
     this->_hp = 100;
     this->_ep = 100;
     this->_ad = 30;
@@ -22,7 +22,7 @@ FragTrap::FragTrap(void)
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-    std::cout << "FragTrap " << name << " constructor called!" << std::endl;
+    std::cout << "FragTrap " << name << " constructor called!." << std::endl;
     this->_hp = 100;
     this->_ep = 100;
     this->_ad = 30;
@@ -42,11 +42,16 @@ FragTrap    &FragTrap::operator=(FragTrap const &frag)
 
 FragTrap::~FragTrap(void)
 {
-    std::cout << "FragTrap " << this->_name << " destructor called!" << std::endl;
+    std::cout << "FragTrap " << this->_name << " destructor called!." << std::endl;
 }
 
 void    FragTrap::highFivesGuys(void)
 {
-    std::cout << "FragTrap " << this->_name << " is requesting a positive high five!.";
-    std::cout << std::endl;
+    if (this->_hp > 0)
+    {
+        std::cout << "FragTrap " << this->_name << " is requesting a positive high five!.";
+        std::cout << std::endl;
+    }
+    else
+        std::cout << this->_name << " is dead." << std::endl;
 }

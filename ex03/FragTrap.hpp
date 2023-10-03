@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 19:07:02 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 19:45:03 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:59:50 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class   FragTrap : public ClapTrap
+class   FragTrap : virtual public ClapTrap
 {
     public:
         FragTrap(void);

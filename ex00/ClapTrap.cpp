@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:13:06 by crigonza          #+#    #+#             */
-/*   Updated: 2023/10/02 21:04:52 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/03 10:41:05 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void    ClapTrap::attack(const std::string &target)
     if (this->_ep > 0 && this->_hp > 0)
     {
         std::cout << "Claptrap " << this->_name << " attacks " << target ;
-        std::cout << " causing " << this->_ad << " points of damage!" << std::endl;
+        std::cout << " causing " << this->_ad << " points of damage!." << std::endl;
         this->_ep--;
     }
     else
@@ -56,7 +56,7 @@ void    ClapTrap::attack(const std::string &target)
         if (this->_hp <= 0)
             std::cout << this->_name << " is dead." << std::endl;
         if (this->_ep == 0)
-            std::cout << this->_name << " has not enough energy points!" << std::endl;
+            std::cout << this->_name << " has not enough energy points!." << std::endl;
     }
 }
 
@@ -76,8 +76,8 @@ void    ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_ep > 0 && this->_hp > 0) 
     {
-        std::cout << "Claptrap " << this->_name << " receive " << amount;
-        std::cout << " points of health!" << std::endl;
+        std::cout << "Claptrap " << this->_name << " heal itself and receive ";
+        std::cout << amount << " points of health!." << std::endl;
         this->_ep--;
     }
     else
@@ -85,7 +85,7 @@ void    ClapTrap::beRepaired(unsigned int amount)
         if (this->_hp <= 0)
             std::cout << this->_name << " is dead." << std::endl;
         if (this->_ep == 0)
-            std::cout << this->_name << " has not enough energy points!" << std::endl;
+            std::cout << this->_name << " has not enough energy points!." << std::endl;
 
     }
 }
