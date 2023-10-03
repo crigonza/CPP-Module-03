@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 19:00:22 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/03 08:26:51 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,16 @@
 int     main(void)
 {
     ScavTrap    def;
-    ScavTrap    batman("Batman");
-    ScavTrap    copy(batman);
-    ScavTrap    joker("Joker");
+    ScavTrap    hodor("Hodor");
+    ScavTrap    copy(hodor);
+    ScavTrap    white("White Walker");
 
-    def = joker;
+    def = white;
 
-
-    def.attack("me");
-    batman.attack("Poison Ivy");
-
+    def.attack("Hodor");
+    hodor.takeDamage(10);
+    hodor.beRepaired(15);
+    hodor.guardGate();
+    
     return (0);
 }
