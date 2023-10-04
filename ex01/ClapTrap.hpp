@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 10:48:31 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 18:04:33 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:22:10 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class   ClapTrap
 {
     protected:
         std::string     _name;
-        int             _hp;
-        int             _ep;
-        int             _ad;
+        int             _hitPoints;
+        int             _energyPoints;
+        int             _attackDamage;
 
     public:
         ClapTrap(void);
@@ -30,6 +30,8 @@ class   ClapTrap
         ~ClapTrap(void);
 
         ClapTrap    &operator=(ClapTrap const &clap);
+
+        void    showStats(void);
 
         void    attack(const std::string &target);
         void    takeDamage(unsigned int amount);

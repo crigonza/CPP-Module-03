@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 19:58:51 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 20:21:10 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:27:52 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class   DiamondTrap : public ScavTrap, public FragTrap
 
         DiamondTrap &operator=(DiamondTrap const &diamond);
 
+        using   ScavTrap::attack;
         void    whoAmI(void);
 };
 

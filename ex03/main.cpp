@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/09/27 20:32:03 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/04 20:45:39 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 int     main(void)
 {
-    DiamondTrap     def;
-    /* ScavTrap    def;
-    ScavTrap    batman("Batman");
-    ScavTrap    copy(batman);
-    ScavTrap    joker("Joker");
+    DiamondTrap     batman("Batman");
 
-    def = joker;
-
-
-    def.attack("me");
-    batman.attack("Poison Ivy"); */
+    std::cout << std::endl;
+    batman.attack("Poison Ivy");
+    batman.takeDamage(10);
+    batman.beRepaired(10);
+    batman.guardGate();
+    batman.highFivesGuys();
+    batman.whoAmI();
+    std::cout << std::endl;
 
     return (0);
 }

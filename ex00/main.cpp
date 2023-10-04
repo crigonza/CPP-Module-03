@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/10/03 10:43:42 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:06:46 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int     main(void)
     ClapTrap    batman("Batman");
     ClapTrap    joker("Joker");
     
+    batman.showStats();
     for (int i = 0; i < 8; i++)
     {
         batman.attack("Joker");

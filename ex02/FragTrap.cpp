@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 19:45:30 by crigonza          #+#    #+#             */
-/*   Updated: 2023/10/03 11:07:16 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:35:33 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 FragTrap::FragTrap(void)
 {
     std::cout << "FragTrap Default constructor called!." << std::endl;
-    this->_hp = 100;
-    this->_ep = 100;
-    this->_ad = 30;
+    this->_hitPoints = 100;
+    this->_energyPoints = 100;
+    this->_attackDamage = 30;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
     std::cout << "FragTrap " << name << " constructor called!." << std::endl;
-    this->_hp = 100;
-    this->_ep = 100;
-    this->_ad = 30;
+    this->_hitPoints = 100;
+    this->_energyPoints = 100;
+    this->_attackDamage = 30;
 }
 
 FragTrap::FragTrap(FragTrap const &frag) : ClapTrap(frag)
@@ -47,7 +47,7 @@ FragTrap::~FragTrap(void)
 
 void    FragTrap::highFivesGuys(void)
 {
-    if (this->_hp > 0)
+    if (this->_hitPoints > 0)
     {
         std::cout << "FragTrap " << this->_name << " is requesting a positive high five!.";
         std::cout << std::endl;

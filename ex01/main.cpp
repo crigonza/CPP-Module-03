@@ -6,7 +6,7 @@
 /*   By: crigonza <crigonza@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 09:33:40 by crigonza          #+#    #+#             */
-/*   Updated: 2023/10/03 08:26:51 by crigonza         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:27:30 by crigonza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,13 @@ int     main(void)
 
     def = white;
 
+    std::cout << std::endl;
+    hodor.showStats();
     def.attack("Hodor");
     hodor.takeDamage(10);
     hodor.beRepaired(15);
     hodor.guardGate();
+    std::cout << std::endl;
     
     return (0);
 }
